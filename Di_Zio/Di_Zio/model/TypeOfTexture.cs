@@ -26,6 +26,6 @@ namespace Di_Zio.model
 		/**
 		 * Used to define the status of a attacking entity
 		 */
-		ATTACK,
+		ATTACK
 	}
 }

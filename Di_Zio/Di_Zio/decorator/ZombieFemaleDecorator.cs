@@ -9,8 +9,16 @@ namespace Di_Zio
 	public class ZombieFemaleDecorator : IZombieTextureDecorator
 	{
 		private ZombieModel zombie;
-		private Texture texture;
+        private Texture texture;
 		private const int SPEED_BONUS = 20;
+
+		public Guid Guid { get => zombie.Guid; }
+
+		public int Life { get => zombie.Life; set => zombie.Life=Life; }
+        public int Speed { get => zombie.Speed; set => zombie.Speed = Speed; }
+        public int Damage { get => zombie.Damage; set => zombie.Damage=Damage; }
+
+		public TypeOfMovement TypeOfMovement { get => zombie.TypeOfMovement; }
 
 		/**
 	     * @param model of zombie
@@ -26,7 +34,7 @@ namespace Di_Zio
 			this.texture.AddTexture(TypeOfTexture.ATTACK, "");
 		}
 
-		public string GetMovementStrategy()
+		public String GetMovementStrategy()
 		{
 			return this.zombie.GetMovementStrategy();
 		}

@@ -12,9 +12,17 @@ namespace Di_Zio
         private Texture texture;
         private const int DAMAGE_BONUS = 1;
 
+		public Guid Guid { get => zombie.Guid; }
+
+		public int Life { get => zombie.Life; set => zombie.Life = Life; }
+		public int Speed { get => zombie.Speed; set => zombie.Speed = Speed; }
+		public int Damage { get => zombie.Damage; set => zombie.Damage = Damage; }
+
+		public TypeOfMovement TypeOfMovement { get => zombie.TypeOfMovement; }
+
         /**
-	     * @param model of zombie
-	    */
+* @param model of zombie
+*/
         public ZombieMaleDecorator(ZombieModel zombie)
         {
             this.zombie = zombie;
@@ -26,7 +34,7 @@ namespace Di_Zio
             this.texture.AddTexture(TypeOfTexture.ATTACK, "");
         }
 
-        public string GetMovementStrategy()
+        public String GetMovementStrategy()
         {
             return this.zombie.GetMovementStrategy();
         }
@@ -55,7 +63,6 @@ namespace Di_Zio
 			this.zombie.Damage = dmg;
 
 		}
-
 
 		public Guid GetUUID()
 		{

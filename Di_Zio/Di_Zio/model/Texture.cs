@@ -12,11 +12,11 @@ namespace Di_Zio.model
         }
 
 		/**
-	 * 
-	 * @param type - Enum in TLMSType, defines the type of texture 
-	 * 
-	 * @param path - Path to texture file
-	 */
+		 * 
+		 * @param type - Enum in TLMSType, defines the type of texture 
+		 * 
+		 * @param path - Path to texture file
+		 */
 		public void AddTexture( TypeOfTexture type,  String path)
 		{
 			this.textureMap.Add(type, path);
