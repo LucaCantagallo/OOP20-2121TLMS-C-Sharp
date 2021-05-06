@@ -11,21 +11,18 @@ namespace Di_Zio.model
             this.textureMap  = new Dictionary<TypeOfTexture, string>(); 
         }
 
-		/**
-		 * 
-		 * @param type - Enum in TLMSType, defines the type of texture 
-		 * 
-		 * @param path - Path to texture file
-		 */
+		/// <summary>
+		/// </summary>
+		/// <param name="type">Enum in TLMSType, defines the type of texture</param>
+		/// <param name="path">Path to texture file</param>
 		public void AddTexture( TypeOfTexture type,  String path)
 		{
 			this.textureMap.Add(type, path);
 		}
 
-		/**
-		 * 
-		 * @return texture map created
-		 */
+		/// <summary>
+        /// </summary>
+        /// <returns>Texture map created</returns>
 		public IDictionary<TypeOfTexture, string> getTextureMap()
 		{
 			return this.textureMap;

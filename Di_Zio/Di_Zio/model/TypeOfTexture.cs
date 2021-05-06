@@ -3,29 +3,28 @@ namespace Di_Zio.model
 {
     public enum TypeOfTexture
     {
-		/**
-		 * Used to define the status of a stopped / waiting entity
-		 */
+		/// <summary>
+		/// Used to define the status of a stopped / waiting entity
+		/// </summary>
 		IDLE,
-
-		/**
-		 * Used to define the status of a walking entity
-		 */
+		/// <summary>
+		/// Used to define the status of a walking entity
+		/// </summary>
 		WALK,
 
-		/**
-		 * Used to define the status of a dead entity
-		 */
+		/// <summary>
+		/// Used to define the status of a dead entity
+		/// </summary>
 		DEAD,
 
-		/**
-		 * Used to define the status of a jumping entity
-		 */
+		/// <summary>
+		/// Used to define the status of a jumping entity
+		/// </summary>
 		JUMP,
 
-		/**
-		 * Used to define the status of a attacking entity
-		 */
+		/// <summary>
+		/// Used to define the status of a attacking entity
+		/// </summary>
 		ATTACK
 	}
 }

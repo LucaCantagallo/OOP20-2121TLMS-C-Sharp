@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/valerio/Desktop/tlms csharp/Di_Zio/Di_Zio/Di_Zio.csproj": {}
+    "/Users/valerio/Desktop/Di_Zio/Di_Zio/Di_Zio.csproj": {}
   },
   "projects": {
-    "/Users/valerio/Desktop/tlms csharp/Di_Zio/Di_Zio/Di_Zio.csproj": {
+    "/Users/valerio/Desktop/Di_Zio/Di_Zio/Di_Zio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/valerio/Desktop/tlms csharp/Di_Zio/Di_Zio/Di_Zio.csproj",
+        "projectUniqueName": "/Users/valerio/Desktop/Di_Zio/Di_Zio/Di_Zio.csproj",
         "projectName": "Di_Zio",
-        "projectPath": "/Users/valerio/Desktop/tlms csharp/Di_Zio/Di_Zio/Di_Zio.csproj",
+        "projectPath": "/Users/valerio/Desktop/Di_Zio/Di_Zio/Di_Zio.csproj",
         "packagesPath": "/Users/valerio/.nuget/packages/",
-        "outputPath": "/Users/valerio/Desktop/tlms csharp/Di_Zio/Di_Zio/obj/",
+        "outputPath": "/Users/valerio/Desktop/Di_Zio/Di_Zio/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/valerio/.config/NuGet/NuGet.Config"
@@ -37,6 +37,24 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.5.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
