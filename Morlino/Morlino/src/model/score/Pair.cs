@@ -4,11 +4,21 @@ using System.Text;
 
 namespace Morlino.src.model.score
 {
+    /// <summary>
+    /// A standard generic Pair<X,Y>, with getters, hashCode, equals, and toString well implemented. 
+    /// </summary>
+    /// <typeparam name="TFirst"></typeparam>
+    /// <typeparam name="TSecond"></typeparam>
     class Pair<TFirst, TSecond>
     {
 		private readonly TFirst x;
 		private readonly TSecond y;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="x">the first component of Pair</param>
+        /// <param name="y">the second component of Pair</param>
         public Pair(TFirst x, TSecond y)
         {
             this.x = x;
