@@ -16,22 +16,23 @@ namespace Di_Zio
 
 		public int Life { get => zombie.Life; set => zombie.Life = Life; }
 		public int Speed { get => zombie.Speed; set => zombie.Speed = Speed; }
-		public int Damage { get => zombie.Damage; set => zombie.Damage = Damage; }
+		public int Damage { get => zombie.Damage + DAMAGE_BONUS; set => zombie.Damage = Damage; }
 
 		public TypeOfMovement TypeOfMovement { get => zombie.TypeOfMovement; }
 
-        /**
-* @param model of zombie
-*/
+        /// <summary>
+        /// Make Male Zombie
+        /// </summary>
+        /// <param name="zombie">Model of zombie</param>
         public ZombieMaleDecorator(ZombieModel zombie)
         {
             this.zombie = zombie;
             this.texture = new Texture();
 
-            this.texture.AddTexture(TypeOfTexture.IDLE, ""); //inserire path delle texture
-            this.texture.AddTexture(TypeOfTexture.WALK, "");
-            this.texture.AddTexture(TypeOfTexture.DEAD, "");
-            this.texture.AddTexture(TypeOfTexture.ATTACK, "");
+            this.texture.AddTexture(TypeOfTexture.IDLE, "path_idle");
+            this.texture.AddTexture(TypeOfTexture.WALK, "path_walk");
+            this.texture.AddTexture(TypeOfTexture.DEAD, "path_dead");
+            this.texture.AddTexture(TypeOfTexture.ATTACK, "path_attack");
         }
 
         public String GetMovementStrategy()
@@ -43,48 +44,6 @@ namespace Di_Zio
         {
             return this.texture;
         }
-
-		
-		public void SetLife( int life)
-		{
-			this.zombie.Life = life;
-		}
-
-		
-		public void SetSpeed( int spd)
-		{
-			this.zombie.Speed = spd;
-
-		}
-
-		
-		public void SetDamage( int dmg)
-		{
-			this.zombie.Damage = dmg;
-
-		}
-
-		public Guid GetUUID()
-		{
-			return this.zombie.Guid;
-		}
-
-		public int GetSpeed()
-		{
-			return this.zombie.Speed;
-		}
-
-
-		public int GetLife()
-		{
-			return this.zombie.Life;
-		}
-
-
-		public int GetDamage()
-		{
-			return this.zombie.Damage + DAMAGE_BONUS;
-		}
 
 	}
 }
